@@ -25,7 +25,7 @@ export const PropertySeo = ({ property }: PropertySeoProps) => {
     address: {
       streetAddress: property.address,
       city: property.city,
-      postalCode: property.zipCode,
+      postalCode: property.zipCode || '',
     },
     geo: {
       latitude: property.latitude,
@@ -34,7 +34,6 @@ export const PropertySeo = ({ property }: PropertySeoProps) => {
     price: property.price,
     surface: property.surface,
     rooms: property.rooms,
-    type: property.type,
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema([

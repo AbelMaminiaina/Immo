@@ -1,23 +1,23 @@
 import type { JsonLdOrganization } from '../types'
 
 export const generateOrganizationSchema = (): JsonLdOrganization => {
-  const siteUrl = import.meta.env.VITE_APP_URL || 'https://immo.fr'
+  const siteUrl = import.meta.env.VITE_APP_URL || 'https://immo.mg'
 
   return {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
-    name: 'Agence Immobiliere',
+    name: 'Agence Immobiliere Madagascar',
     description:
-      'Votre partenaire de confiance pour tous vos projets immobiliers. Vente, location, estimation.',
+      'Votre partenaire de confiance pour tous vos projets immobiliers a Madagascar. Vente, location, terrains.',
     url: siteUrl,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '12 Rue de la Paix',
-      addressLocality: 'Paris',
-      postalCode: '75002',
-      addressCountry: 'FR',
+      streetAddress: 'Lot IVG 123 Ivandry',
+      addressLocality: 'Antananarivo',
+      postalCode: '101',
+      addressCountry: 'MG',
     },
-    telephone: '+33123456789',
-    email: 'contact@immo.fr',
+    telephone: '+261341234567',
+    email: 'contact@immo.mg',
   }
 }

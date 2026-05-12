@@ -5,7 +5,7 @@ export interface PageSeoData {
   noindex?: boolean
   openGraph?: OpenGraphData
   twitter?: TwitterData
-  jsonLd?: Record<string, unknown>[]
+  jsonLd?: object[]
 }
 
 export interface OpenGraphData {

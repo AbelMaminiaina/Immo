@@ -17,7 +17,6 @@ interface RealEstateSchemaParams {
   price: number
   surface: number
   rooms: number
-  type: 'vente' | 'location'
 }
 
 export const generateRealEstateSchema = ({
@@ -30,7 +29,6 @@ export const generateRealEstateSchema = ({
   price,
   surface,
   rooms,
-  type,
 }: RealEstateSchemaParams): JsonLdRealEstateListing => {
   return {
     '@context': 'https://schema.org',
@@ -44,7 +42,7 @@ export const generateRealEstateSchema = ({
       streetAddress: address.streetAddress,
       addressLocality: address.city,
       postalCode: address.postalCode,
-      addressCountry: 'FR',
+      addressCountry: 'MG',
     },
     geo: geo
       ? {
@@ -56,7 +54,7 @@ export const generateRealEstateSchema = ({
     offers: {
       '@type': 'Offer',
       price,
-      priceCurrency: 'EUR',
+      priceCurrency: 'MGA',
       availability: 'https://schema.org/InStock',
     },
     floorSize: {

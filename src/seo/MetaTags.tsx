@@ -15,7 +15,6 @@ export const MetaTags = ({
   twitter,
   jsonLd,
 }: MetaTagsProps) => {
-  const siteUrl = import.meta.env.VITE_APP_URL || 'https://immo.fr'
   const siteName = import.meta.env.VITE_APP_NAME || 'Agence Immobiliere'
 
   return (

@@ -28,7 +28,7 @@ export const ContactForm = ({
   propertyTitle,
   onSuccess,
 }: ContactFormProps) => {
-  const { mutate, isPending, isSuccess, isError, error } = useContactLead()
+  const { mutate, isPending, isSuccess, isError } = useContactLead()
 
   const {
     register,
