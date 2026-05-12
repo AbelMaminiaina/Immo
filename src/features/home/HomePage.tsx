@@ -280,6 +280,81 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Process Steps Section */}
+      <section className="py-20 bg-theme-muted">
+        <div className="container-app">
+          <div className="text-center mb-16">
+            <h2 className="text-2xl lg:text-4xl font-serif font-bold text-theme-primary mb-4">
+              Notre processus
+            </h2>
+            <p className="text-theme-secondary text-lg max-w-3xl mx-auto">
+              Decouvrez les etapes claires et efficaces que nous suivons pour faire de votre projet immobilier une reussite.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                step: '01',
+                title: 'Prise de contact',
+                description: 'Contactez-nous pour nous faire part de votre projet. Nous ecoutons vos besoins et definissons ensemble vos criteres.',
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                ),
+              },
+              {
+                step: '02',
+                title: 'Recherche et planification',
+                description: 'Nous recherchons les biens correspondant a vos criteres et planifions les visites selon votre disponibilite.',
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                ),
+              },
+              {
+                step: '03',
+                title: 'Visite et negociation',
+                description: 'Nous vous accompagnons lors des visites et negocions pour vous les meilleures conditions possibles.',
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                ),
+              },
+              {
+                step: '04',
+                title: 'Finalisation & suivi',
+                description: 'Nous vous assistons jusqu\'a la signature et restons a vos cotes pour un suivi personnalise apres-vente.',
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                ),
+              },
+            ].map((item, index) => (
+              <div key={item.step} className="relative">
+                {/* Connector line */}
+                {index < 3 && (
+                  <div className="hidden lg:block absolute top-16 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary-300 to-primary-100 dark:from-primary-700 dark:to-primary-900" />
+                )}
+
+                <div className="card p-8 text-center relative z-10 h-full hover:-translate-y-1 transition-transform duration-300">
+                  {/* Step number */}
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center text-white text-sm font-bold shadow-lg">
+                    {item.step}
+                  </div>
+
+                  {/* Icon */}
+                  <div className="w-16 h-16 mx-auto mb-6 mt-4 rounded-2xl bg-primary-50 dark:bg-primary-900/30 flex items-center justify-center text-brand">
+                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      {item.icon}
+                    </svg>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-theme-primary mb-3">{item.title}</h3>
+                  <p className="text-theme-secondary text-sm">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="container-app py-20">
         <div className="relative overflow-hidden rounded-3xl">
