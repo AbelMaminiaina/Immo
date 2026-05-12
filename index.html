@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Agence Immobiliere - Trouvez votre bien immobilier ideal. Vente et location de maisons, appartements et biens de prestige." />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Agence Immobiliere</title>
+
+    <!-- Anti-FOUC Script - Prevent flash of wrong theme -->
+    <script>
+      (function() {
+        const stored = localStorage.getItem('immo-theme');
+        let theme = 'system';
+
+        if (stored) {
+          try {
+            const parsed = JSON.parse(stored);
+            theme = parsed.state?.theme || 'system';
+          } catch (e) {}
+        }
+
+        let resolved = theme;
+        if (theme === 'system') {
+          resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        if (resolved === 'dark') {
+          document.documentElement.classList.add('dark');
+          document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#030712');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
