@@ -149,12 +149,12 @@ const HomePage = () => {
 
         {/* Stats Bar */}
         <div className="relative bg-theme-surface/95 backdrop-blur-lg border-t border-theme-muted">
-          <div className="container-app">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-0 sm:divide-x divide-theme-muted">
+          <div className="container-app px-2 sm:px-6">
+            <div className="grid grid-cols-4 divide-x divide-theme-muted">
               {stats.map((stat) => (
                 <div key={stat.label} className="py-3 sm:py-6 lg:py-8 text-center px-1 sm:px-4">
-                  <p className="text-base sm:text-2xl lg:text-4xl font-bold text-brand mb-0.5 sm:mb-1">{stat.value}</p>
-                  <p className="text-[10px] sm:text-base lg:text-lg text-theme-primary leading-tight">{stat.label}</p>
+                  <p className="text-sm sm:text-2xl lg:text-4xl font-bold text-brand">{stat.value}</p>
+                  <p className="text-[8px] sm:text-base lg:text-lg text-theme-primary leading-tight whitespace-nowrap">{stat.label}</p>
                 </div>
               ))}
             </div>
