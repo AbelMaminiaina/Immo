@@ -64,12 +64,12 @@ const HomePage = () => {
               Plus de 500 biens disponibles
             </div>
 
-            <h1 className="text-4xl lg:text-6xl font-serif font-bold mb-6 text-white text-balance leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-serif font-bold mb-4 sm:mb-6 text-white text-balance leading-tight">
               Trouvez le bien immobilier{' '}
               <span className="text-accent-300">de vos reves</span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-white/80 mb-10 max-w-2xl">
+            <p className="text-base sm:text-lg lg:text-xl text-white/80 mb-8 sm:mb-10 max-w-2xl">
               Decouvrez notre selection de biens d'exception a vendre et a louer
               a Madagascar. Antananarivo, Nosy Be, Toamasina et plus encore.
             </p>
@@ -77,21 +77,21 @@ const HomePage = () => {
             {/* Search Form */}
             <form
               onSubmit={handleSearch}
-              className="bg-theme-surface rounded-2xl p-5 shadow-2xl border border-white/10"
+              className="bg-theme-surface rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-2xl border border-white/10"
             >
               {/* Type Toggle */}
-              <div className="flex gap-2 mb-5">
+              <div className="flex gap-2 mb-4 sm:mb-5">
                 <button
                   type="button"
                   onClick={() => setSearchType('vente')}
-                  className={`flex-1 py-3 px-6 rounded-xl text-sm font-semibold transition-all duration-300 ${
+                  className={`flex-1 py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl text-sm font-semibold transition-all duration-300 ${
                     searchType === 'vente'
                       ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/25'
                       : 'bg-theme-muted text-theme-secondary hover:text-theme-primary'
                   }`}
                 >
-                  <span className="flex items-center justify-center gap-2">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <span className="flex items-center justify-center gap-1.5 sm:gap-2">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
                     Acheter
@@ -100,14 +100,14 @@ const HomePage = () => {
                 <button
                   type="button"
                   onClick={() => setSearchType('location')}
-                  className={`flex-1 py-3 px-6 rounded-xl text-sm font-semibold transition-all duration-300 ${
+                  className={`flex-1 py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl text-sm font-semibold transition-all duration-300 ${
                     searchType === 'location'
                       ? 'bg-gradient-to-r from-secondary-500 to-secondary-600 text-white shadow-lg shadow-secondary-500/25'
                       : 'bg-theme-muted text-theme-secondary hover:text-theme-primary'
                   }`}
                 >
-                  <span className="flex items-center justify-center gap-2">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <span className="flex items-center justify-center gap-1.5 sm:gap-2">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                     </svg>
                     Louer
@@ -151,9 +151,9 @@ const HomePage = () => {
           <div className="container-app">
             <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-theme-muted">
               {stats.map((stat) => (
-                <div key={stat.label} className="py-6 lg:py-8 text-center">
-                  <p className="text-2xl lg:text-3xl font-bold text-brand mb-1">{stat.value}</p>
-                  <p className="text-sm text-theme-secondary">{stat.label}</p>
+                <div key={stat.label} className="py-4 sm:py-6 lg:py-8 text-center">
+                  <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-brand mb-0.5 sm:mb-1">{stat.value}</p>
+                  <p className="text-xs sm:text-sm text-theme-secondary">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -162,13 +162,13 @@ const HomePage = () => {
       </section>
 
       {/* Featured Properties */}
-      <section className="container-app py-20">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10">
+      <section className="container-app py-12 sm:py-20">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 sm:mb-10">
           <div>
-            <h2 className="text-2xl lg:text-4xl font-serif font-bold text-theme-primary mb-3">
+            <h2 className="text-xl sm:text-2xl lg:text-4xl font-serif font-bold text-theme-primary mb-2 sm:mb-3">
               Biens en vedette
             </h2>
-            <p className="text-theme-secondary text-lg">
+            <p className="text-theme-secondary text-sm sm:text-lg">
               Decouvrez notre selection de biens d'exception
             </p>
           </div>
@@ -183,13 +183,13 @@ const HomePage = () => {
         </div>
 
         {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[...Array(6)].map((_, i) => (
-              <div key={i} className="skeleton h-[420px]" />
+              <div key={i} className="skeleton h-[380px] sm:h-[420px]" />
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {featuredProperties?.map((property) => (
               <PropertyCard key={property.id} property={property} />
             ))}
@@ -198,13 +198,13 @@ const HomePage = () => {
       </section>
 
       {/* Cities Section */}
-      <section className="py-20 bg-theme-muted">
+      <section className="py-12 sm:py-20 bg-theme-muted">
         <div className="container-app">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl lg:text-4xl font-serif font-bold text-theme-primary mb-3">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl lg:text-4xl font-serif font-bold text-theme-primary mb-2 sm:mb-3">
               Explorez par ville
             </h2>
-            <p className="text-theme-secondary text-lg">
+            <p className="text-theme-secondary text-sm sm:text-lg">
               Trouvez des biens dans les plus belles villes de Madagascar
             </p>
           </div>
@@ -230,17 +230,17 @@ const HomePage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="container-app py-20">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl lg:text-4xl font-serif font-bold text-theme-primary mb-3">
+      <section className="container-app py-12 sm:py-20">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl lg:text-4xl font-serif font-bold text-theme-primary mb-2 sm:mb-3">
             Nos services
           </h2>
-          <p className="text-theme-secondary text-lg max-w-2xl mx-auto">
+          <p className="text-theme-secondary text-sm sm:text-lg max-w-2xl mx-auto">
             Un accompagnement personnalise pour tous vos projets immobiliers
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {[
             {
               icon: (
@@ -266,33 +266,33 @@ const HomePage = () => {
           ].map((service) => (
             <div
               key={service.title}
-              className="card p-8 text-center group hover:-translate-y-1 transition-transform duration-300"
+              className="card p-5 sm:p-8 text-center group hover:-translate-y-1 transition-transform duration-300"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white shadow-lg shadow-primary-500/25 group-hover:shadow-primary-500/40 transition-shadow">
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white shadow-lg shadow-primary-500/25 group-hover:shadow-primary-500/40 transition-shadow">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   {service.icon}
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-theme-primary mb-3">{service.title}</h3>
-              <p className="text-theme-secondary">{service.description}</p>
+              <h3 className="text-base sm:text-xl font-semibold text-theme-primary mb-2 sm:mb-3">{service.title}</h3>
+              <p className="text-theme-secondary text-sm">{service.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Process Steps Section */}
-      <section className="py-20 bg-theme-muted">
+      <section className="py-12 sm:py-20 bg-theme-muted">
         <div className="container-app">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-4xl font-serif font-bold text-theme-primary mb-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-xl sm:text-2xl lg:text-4xl font-serif font-bold text-theme-primary mb-3 sm:mb-4">
               Notre processus
             </h2>
-            <p className="text-theme-secondary text-lg max-w-3xl mx-auto">
+            <p className="text-theme-secondary text-sm sm:text-lg max-w-3xl mx-auto px-4">
               Decouvrez les etapes claires et efficaces que nous suivons pour faire de votre projet immobilier une reussite.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
                 step: '01',
@@ -333,21 +333,21 @@ const HomePage = () => {
                   <div className="hidden lg:block absolute top-16 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary-300 to-primary-100 dark:from-primary-700 dark:to-primary-900" />
                 )}
 
-                <div className="card p-8 text-center relative z-10 h-full hover:-translate-y-1 transition-transform duration-300">
+                <div className="card p-5 sm:p-8 text-center relative z-10 h-full hover:-translate-y-1 transition-transform duration-300">
                   {/* Step number */}
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center text-white text-sm font-bold shadow-lg">
+                  <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center text-white text-xs sm:text-sm font-bold shadow-lg">
                     {item.step}
                   </div>
 
                   {/* Icon */}
-                  <div className="w-16 h-16 mx-auto mb-6 mt-4 rounded-2xl bg-primary-50 dark:bg-primary-900/30 flex items-center justify-center text-brand">
-                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 mt-3 sm:mt-4 rounded-xl sm:rounded-2xl bg-primary-50 dark:bg-primary-900/30 flex items-center justify-center text-brand">
+                    <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       {item.icon}
                     </svg>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-theme-primary mb-3">{item.title}</h3>
-                  <p className="text-theme-secondary text-sm">{item.description}</p>
+                  <h3 className="text-base sm:text-xl font-semibold text-theme-primary mb-2 sm:mb-3">{item.title}</h3>
+                  <p className="text-theme-secondary text-xs sm:text-sm">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -356,20 +356,20 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="container-app py-20">
-        <div className="relative overflow-hidden rounded-3xl">
+      <section className="container-app py-12 sm:py-20">
+        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl">
           {/* Background */}
           <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-secondary-600 dark:from-primary-700 dark:to-secondary-700" />
 
           {/* Decorative circles */}
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-2xl" />
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-2xl" />
+          <div className="absolute -top-20 -right-20 w-40 sm:w-64 h-40 sm:h-64 bg-white/10 rounded-full blur-2xl" />
+          <div className="absolute -bottom-20 -left-20 w-40 sm:w-64 h-40 sm:h-64 bg-white/10 rounded-full blur-2xl" />
 
-          <div className="relative p-10 lg:p-16 text-center text-white">
-            <h2 className="text-2xl lg:text-4xl font-serif font-bold mb-4">
+          <div className="relative p-6 sm:p-10 lg:p-16 text-center text-white">
+            <h2 className="text-xl sm:text-2xl lg:text-4xl font-serif font-bold mb-3 sm:mb-4">
               Vous avez un bien a vendre ou a louer ?
             </h2>
-            <p className="text-white/80 mb-10 max-w-2xl mx-auto text-lg">
+            <p className="text-white/80 mb-6 sm:mb-10 max-w-2xl mx-auto text-sm sm:text-lg">
               Confiez-nous votre bien et beneficiez de notre expertise pour une
               vente ou une location rapide et au meilleur prix.
             </p>

@@ -88,7 +88,7 @@ export const PropertyCard = ({ property }: PropertyCardProps) => {
         </div>
       </Link>
 
-      <div className="p-5">
+      <div className="p-4 sm:p-5">
         <Link to={`/biens/${property.slug}`} className="block group/title">
           <h3 className="text-lg font-semibold text-theme-primary mb-2 line-clamp-2 group-hover/title:text-brand transition-colors">
             {property.title}
@@ -120,22 +120,22 @@ export const PropertyCard = ({ property }: PropertyCardProps) => {
         </p>
 
         {/* Property Features */}
-        <div className="flex items-center gap-4 text-sm text-theme-secondary mb-4">
-          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-theme-muted">
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-theme-secondary mb-4">
+          <span className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 rounded-lg bg-theme-muted">
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
             </svg>
             {formatSurface(property.surface)}
           </span>
-          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-theme-muted">
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <span className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 rounded-lg bg-theme-muted">
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
             {formatRooms(property.rooms)}
           </span>
           {property.bedrooms > 0 && (
-            <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-theme-muted">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <span className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 rounded-lg bg-theme-muted">
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>
               {property.bedrooms} ch.
@@ -146,7 +146,7 @@ export const PropertyCard = ({ property }: PropertyCardProps) => {
         {/* Price */}
         <div className="pt-4 border-t border-theme-muted">
           <div className="flex items-baseline justify-between mb-1">
-            <p className="text-2xl font-bold text-brand">
+            <p className="text-xl sm:text-2xl font-bold text-brand">
               {formatPrice(property.price, property.type)}
             </p>
             {property.energyClass && (
