@@ -40,7 +40,7 @@ const HomePage = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden flex flex-col">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -48,28 +48,29 @@ const HomePage = () => {
             alt="Villa de luxe"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50 dark:from-gray-950/95 dark:via-gray-950/80 dark:to-gray-950/60" />
+          <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60 dark:from-gray-950/98 dark:via-gray-950/85 dark:to-gray-950/70" />
         </div>
 
         {/* Decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary-500/20 rounded-full blur-3xl" />
+          <div className="absolute -top-40 -right-40 w-60 sm:w-80 h-60 sm:h-80 bg-primary-500/20 rounded-full blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-60 sm:w-80 h-60 sm:h-80 bg-secondary-500/20 rounded-full blur-3xl" />
         </div>
 
-        <div className="container-app relative py-24 lg:py-36">
+        <div className="container-app relative py-12 sm:py-24 lg:py-36 w-full flex-1 flex items-center">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm font-medium mb-6">
-              <span className="w-2 h-2 rounded-full bg-accent-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-400 animate-pulse" />
               Plus de 500 biens disponibles
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-serif font-bold mb-4 sm:mb-6 text-white text-balance leading-tight">
-              Trouvez le bien immobilier{' '}
-              <span className="text-accent-300">de vos reves</span>
+            <h1 className="text-2xl sm:text-4xl lg:text-6xl font-serif font-bold mb-3 sm:mb-6 text-white leading-tight">
+              Trouvez le bien{' '}
+              <span className="text-accent-300">immobilier</span>{' '}
+              <span className="block sm:inline">de vos reves</span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-white/80 mb-8 sm:mb-10 max-w-2xl">
+            <p className="text-sm sm:text-lg lg:text-xl text-white/80 mb-6 sm:mb-10 max-w-2xl">
               Decouvrez notre selection de biens d'exception a vendre et a louer
               a Madagascar. Antananarivo, Nosy Be, Toamasina et plus encore.
             </p>
@@ -149,11 +150,11 @@ const HomePage = () => {
         {/* Stats Bar */}
         <div className="relative bg-theme-surface/95 backdrop-blur-lg border-t border-theme-muted">
           <div className="container-app">
-            <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-theme-muted">
+            <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-theme-muted">
               {stats.map((stat) => (
                 <div key={stat.label} className="py-4 sm:py-6 lg:py-8 text-center">
-                  <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-brand mb-0.5 sm:mb-1">{stat.value}</p>
-                  <p className="text-xs sm:text-sm text-theme-secondary">{stat.label}</p>
+                  <p className="text-xl sm:text-2xl lg:text-4xl font-bold text-brand mb-1">{stat.value}</p>
+                  <p className="text-xs sm:text-base lg:text-lg text-theme-primary">{stat.label}</p>
                 </div>
               ))}
             </div>
